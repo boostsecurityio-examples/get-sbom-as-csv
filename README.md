@@ -2,17 +2,17 @@
 
 Export an SBOM from a BoostSecurity project as a CSV file.
 
-1.  [Acquire a Boost API Token](https://app.boostsecurity.io/settings?tab=Application+Keys) and assign it to the following environment variable: BOOST_API_TOKEN
+1.  [Acquire a Boost API Token](https://app.boostsecurity.io/settings?tab=Application+Keys) and assign it to the following environment variable: `BOOST_API_TOKEN`
 
-    Example: $ export BOOST_API_TOKEN={your_api_token}
+    Example: `$ export BOOST_API_TOKEN={your_api_token}`
 
 2.  Install dependencies with pip
 
-    Example: $ pip install -r requirements.txt
+    Example: `$ pip install -r requirements.txt`
 
-3.  Run get_resources.py in order to view the available resources that you can acquire an SBOM for.
+3.  Run `get_resources.py` in order to view the available resources that you can acquire an SBOM for.
 
-    Example: $ python get_resources.py
+    Example: `$ python get_resources.py`
 
     The execution of this script will create a file titled 'available_resources.json' that will allow you to see the available organizations and associated projects that you can use in the `main.py` file to acquire an SBOM for.
 
@@ -25,8 +25,8 @@ Export an SBOM from a BoostSecurity project as a CSV file.
             {"organization": "your_organization", "project": "your_project"}
         ]
 
-5.  Run main.py to generate SBOMs
+5.  Run `main.py` to generate SBOMs
 
-    Example: $ python main.py
+    Example: `$ python main.py`
 
 6.  Review the generated SBOMs in the artifacts directory.
