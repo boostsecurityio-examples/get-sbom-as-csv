@@ -1,6 +1,6 @@
 # SBOM as CSV
 
-Export an SBOM from a BoostSecurityio project as a CSV file.
+Export a SBOM from a BoostSecurityio project as a CSV file.
 
 1.  [Acquire a Boost API Token](https://app.boostsecurity.io/settings?tab=Application+Keys) and assign it to the following environment variable: `BOOST_API_TOKEN`
 
