@@ -1,28 +1,32 @@
-1. [Acquire a Boost API Token](https://app.boostsecurity.io/settings?tab=Application+Keys) and assign it to the following environment variable: BOOST_API_TOKEN
+# SBOM as CSV
 
-Example: $ export BOOST_API_TOKEN={your_api_token}
+Export an SBOM from a BoostSecurity project as a CSV file.
 
-2. Install dependencies with pip
+1.  [Acquire a Boost API Token](https://app.boostsecurity.io/settings?tab=Application+Keys) and assign it to the following environment variable: BOOST_API_TOKEN
 
-Example: $ pip install -r requirements.txt
+    Example: $ export BOOST_API_TOKEN={your_api_token}
 
-3. Run get_resources.py in order to view the available resources that you can acquire an SBOM for.
+2.  Install dependencies with pip
 
-Example: $ python get_resources.py
+    Example: $ pip install -r requirements.txt
 
-The execution of this script will create a file titled 'available_resources.json' that will allow you to see the available organizations and associated projects that you can use in the `main.py` file to acquire an SBOM for.
+3.  Run get_resources.py in order to view the available resources that you can acquire an SBOM for.
 
-4. Adjust `selected_resources` in `main.py` (as of writing, this is line 6) to specify which projects you would like to get SBOMs for.
+    Example: $ python get_resources.py
 
-Example:
+    The execution of this script will create a file titled 'available_resources.json' that will allow you to see the available organizations and associated projects that you can use in the `main.py` file to acquire an SBOM for.
 
-    selected_resources = [
-        {"organization": "thefrenchbear", "project": "winnipeg"},
-        {"organization": "your_organization", "project": "your_project"}
-    ]
+4.  Adjust `selected_resources` in `main.py` (as of writing, this is line 6) to specify which projects you would like to get SBOMs for.
 
-5. Run main.py to generate SBOMs
+    Example:
 
-Example: $ python main.py
+        selected_resources = [
+            {"organization": "thefrenchbear", "project": "winnipeg"},
+            {"organization": "your_organization", "project": "your_project"}
+        ]
 
-6. Review the generated SBOMs in the artifacts directory.
+5.  Run main.py to generate SBOMs
+
+    Example: $ python main.py
+
+6.  Review the generated SBOMs in the artifacts directory.
